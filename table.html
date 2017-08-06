@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表格排序</title>
+	<script src="utils.js"></script>
+</head>
+<script>
+window.onload=function(){
+	var ul=document.getElementsByTagName('ul')[0];
+	var li=ul.getElementsByTagName('li');
+	var ary=utils.listToArray(li);
+	ary.sort(function(a,b){
+		return parseFloat(a.innerHTML)-parseFloat(b.innerHTML)
+	});
+	for(var i=0;i<ary.length;i++){
+		ul.appendChild(ary[i]);
+		console.log(li.length)
+	}
+}
+</script>
+<body>
+	<ul>
+		<li>12</li>
+		<li>33</li>
+		<li>86</li>
+		<li>11</li>
+		<li>5</li>
+	</ul>
+</body>
+</html>
