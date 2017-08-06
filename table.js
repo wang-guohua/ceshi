@@ -2,7 +2,7 @@ window.onload=function(){
 	var tab=document.getElementById("tab");	
 	var table=tab.getElementsByTagName('table')[0];
 
-	//表格获取元素专有词
+	//表格获取元素专有词。
 	var thead=table.tHead;
 	var tbody=table.tBodies[0];
 	var row=tbody.rows;
